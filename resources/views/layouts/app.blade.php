@@ -103,8 +103,8 @@
                     </div>
                 @else
                     <a href="{{route('login')}}"
-                       class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">Login</a>
-                    <a href="{{route('register')}}" class="bg-blue-600 text-white rounded py-2 px-4 mx-2">Register</a>
+                       class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">Giriş Yap</a>
+                    <a href="{{route('register')}}" class="bg-blue-600 text-white rounded py-2 px-4 mx-2">Uye Ol</a>
                 @endauth
             </div>
         </div>
