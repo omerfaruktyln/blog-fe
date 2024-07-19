@@ -3,7 +3,7 @@
     <div class="container max-w-4xl mx-auto py-6">
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <!-- Latest Post -->
+            <!-- Son Post -->
             <div class="col-span-2">
                 <h2 class="text-lg sm:text-xl font-bold text-green-500 uppercase pb-1 border-b-2 border-green-500 mb-3">
                    Son Eklenen Gönderiler
@@ -14,7 +14,7 @@
                 @endif
             </div>
 
-            <!-- Popular 3 post -->
+            <!-- Populer 3 post -->
             <div>
                 <h2 class="text-lg sm:text-xl font-bold text-green-500 uppercase pb-1 border-b-2 border-green-500 mb-3">
                     Popüler Gönderiler
