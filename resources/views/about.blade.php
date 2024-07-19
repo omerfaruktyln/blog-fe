@@ -1,4 +1,4 @@
-<x-app-layout meta-title="TaySoft Blog - Hakkımızda">
+<x-app-layout meta-title="TaySoft Blog - KVKK & GİZLİLİK SÖZLEŞMESİ">
 
     <div class="container mx-auto flex flex-wrap py-6">
 
