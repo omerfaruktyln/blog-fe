@@ -1,7 +1,7 @@
 <x-app-layout meta-title="TaySoft Blog - KVKK & GİZLİLİK SÖZLEŞMESİ">
 
     <div class="container mx-auto flex flex-wrap py-6">
-
+        
         <!-- Post Section -->
         <section class="w-full md:w-full flex flex-col items-center px-3">
 

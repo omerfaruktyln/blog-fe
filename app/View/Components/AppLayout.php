@@ -22,9 +22,7 @@ class AppLayout extends Component
                     ->get();
     }
 
-    /**
-     * Get the view / contents that represents the component.
-     */
+
     public function render(): View
     {
         return view('layouts.app');
