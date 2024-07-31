@@ -21,11 +21,10 @@ class PostController extends Controller
     {
 
        // API'den JSON verilerini al
-    $response = Http::get('http://host.docker.internal:82/api/post/home');
+       $response = Http::get(env('API_URL') . 'post/home');
 
     // JSON verilerini diziye dönüştür
     $data = $response->json();
-
 
     // Latest post
     $latestPostData = $data['latest_post'];
@@ -59,7 +58,6 @@ class PostController extends Controller
         $category->fill($item);
         return $category;
     });
-   
 
     // Verileri kontrol etmek için
         return view('home', compact(
@@ -70,13 +68,12 @@ class PostController extends Controller
         ));
     }
 
-
     /**
      * Display the specified resource.
      */
     public function show(Post $post, Request $request)
     {
-        if (!$post->active || $post->published_at > Carbon::now()) {
+        if (!$post->active) {
             throw new NotFoundHttpException();
         }
        
@@ -85,8 +82,7 @@ class PostController extends Controller
           
         ];
         
-        $response = Http::post('http://host.docker.internal:82/api/post/show', $postData);
-
+        $response = Http::post(env('API_URL') . 'post/show', $postData);
         $data = $response->json();
 
         $prevData = $data['prev'];
@@ -120,9 +116,8 @@ class PostController extends Controller
     {
         $postData = [
             'category' => $category,
-          
         ];
-        $response = Http::post('http://host.docker.internal:82/api/post/category',$postData );
+        $response = Http::post(env('API_URL') . 'post/category',$postData );
         $data = $response->json();
         $postDatas = $data['posts']['data'];
         $posts = collect($postDatas)->map(function($item) {
@@ -142,7 +137,7 @@ class PostController extends Controller
           
         ];
         
-        $response = Http::post('http://host.docker.internal:82/api/post/search', $postData);
+        $response = Http::post(env('API_URL') . 'post/search', $postData);
 
         $data = $response->json();
         $postDatas = $data['posts']['data'];
